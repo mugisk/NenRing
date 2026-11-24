@@ -1,13 +1,34 @@
 import Foundation
 import SwiftUI
 
+private final class ResourceBundleFinder {}
+
 /// Display-only translation. Never use translated text as a persisted key.
 enum UIString {
     static let preferenceKey = "uiLanguage"
+    /// Finds the package's resource bundle without SwiftPM's generated
+    /// `Bundle.module`: the native build system of Swift 6.3 and earlier
+    /// writes the absolute build path into that accessor, which would publish
+    /// the builder's folder inside the app.
+    private static let resourceBundle: Bundle? = {
+        let name = "NenRing_NenRing.bundle"
+        let codeBundle = Bundle(for: ResourceBundleFinder.self)
+        let candidates = [
+            Bundle.main.resourceURL,                       // NenRing.app
+            codeBundle.resourceURL,
+            Bundle.main.bundleURL,                         // command-line runs
+            codeBundle.bundleURL.deletingLastPathComponent(), // swift test
+        ]
+        for case let directory? in candidates {
+            if let bundle = Bundle(url: directory.appendingPathComponent(name)) { return bundle }
+        }
+        return nil
+    }()
+
     private static let languageBundles: [String: Bundle] = {
         var bundles: [String: Bundle] = [:]
         for code in ["ja", "en"] {
-            if let path = Bundle.module.path(forResource: code, ofType: "lproj"),
+            if let path = resourceBundle?.path(forResource: code, ofType: "lproj"),
                let bundle = Bundle(path: path) { bundles[code] = bundle }
         }
         return bundles
