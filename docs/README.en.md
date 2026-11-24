@@ -53,6 +53,6 @@ This index and the seven entry documents below are available in English and Japa
 - [Diagnostic reports from other Macs](DIAGNOSTIC_REPORTS.en.md): acquisition, sharing, maintainer-side checks and privacy constraints.
 - [English UI terminology and implementation policy](UI_LOCALIZATION.md) (Japanese only): labels, units, dates and times, and compatibility when extending the Japanese UI to English.
 - [Menu bar popup appearance](MENU_BAR_APPEARANCE.md) (Japanese only): applying appearance settings while retaining native menu corners and shadows, and checking the rendered result.
-- [Building the experimental release and first launch](EXPERIMENTAL_RELEASE.md) (Japanese only): the final step, done after the UI and documentation are complete.
+- [Building the release and first launch](RELEASE.md) (Japanese only): building the DMG, what the release page states, and what the first-launch check found.
 
 The authoritative license text is the MIT [LICENSE](../LICENSE). The [icon and logo license](../Resources/NenRingIcons/LICENSE.md) is defined separately.

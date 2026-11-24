@@ -41,6 +41,6 @@ Out of scope: the accuracy of wear or endurance estimates, and bugs in smartmont
 ## Known limitations
 
 - Local builds use ad-hoc signing unless `CODE_SIGN_IDENTITY` is set. Ad-hoc signing detects tampering but does not prove who built the binary.
-- There is no notarized release yet.
+- The release on GitHub Releases is signed ad hoc only and is not notarized by Apple.
 - On a macOS release the project has not reviewed, the first Direct FTL read is a call into an interface whose layout has not been checked on that release. Outside the macOS 14/15 compatibility trial, it is always started by the user; scheduled collection follows only after that read passed the SMART cross-check.
 - On macOS 14 and 15, scheduled reads start without a manual first read, and values that pass the per-read SMART Host-writes check feed the forecast. The boundary-continuity checks detect sudden changes, not a private value whose meaning differs on these releases, and a first install has no earlier history to compare with.

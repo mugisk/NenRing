@@ -25,7 +25,7 @@ macOS 15.6以降、Xcode 26以降またはそのCommand Line Tools（Swift 6.2�
 
 ## プルリクエストの前の確認
 
-GitHub上のCIはありません。マージの条件はローカルでの確認です。
+プルリクエストでは、GitHub Actionsが同じ確認をmacOS 26で実行します。プルリクエストを作成する前に、手元でも次を実行してください。
 
 ```sh
 ./scripts/ci-local.sh

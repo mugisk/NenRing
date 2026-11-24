@@ -1,0 +1,28 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  local-ci:
+    name: Tests, release build and signatures
+    # Run only in mugisk/NenRing, not in forks or other copies of the code.
+    if: github.repository == 'mugisk/NenRing'
+    runs-on: macos-26
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v7
+      - name: Install smartmontools
+        run: brew install smartmontools
+      - name: Run scripts/ci-local.sh
+        run: ./scripts/ci-local.sh

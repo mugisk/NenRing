@@ -26,7 +26,7 @@ Using available readings, it displays SMART warnings and increases in bad blocks
 > [!NOTE]
 > NenRing is under active development, so its forecast calculations and displays may change. Forecasts are research estimates, not Apple ratings, warranties or failure predictions. It is built to work on other models and macOS releases, but acquisition and forecasts have been checked on real hardware only with one M1 MacBook Air. [Diagnostic reports from other Macs](#contributing-hardware-data) are welcome.
 
-[Build and run](#install-build-from-source) · [Features](#features) · [Supported storage](#supported-storage) · [Privacy and data](#privacy-and-data) · [Documentation](docs/README.en.md) · [Report your Mac](#contributing-hardware-data)
+[Install](#install) · [Features](#features) · [Supported storage](#supported-storage) · [Privacy and data](#privacy-and-data) · [Documentation](docs/README.en.md) · [Report your Mac](#contributing-hardware-data)
 
 ### Menu bar
 
@@ -63,9 +63,32 @@ NenRing reads the SSD health (S.M.A.R.T.) and temperature with `smartctl`, which
 
 The app looks for `smartctl` on `PATH` and in the `bin` and `sbin` folders of `/opt/homebrew`, `/usr/local` and `/opt/local` (MacPorts). It is invoked as an external program and is not bundled. Without `smartctl` the app still starts, but S.M.A.R.T. and temperature are not shown. Which items can be read depends on the Mac, the macOS version and the device; the app shows only what `smartctl` returns.
 
-## Install (build from source)
+## Install
 
-There is **no prebuilt or notarized release yet**. For now, NenRing has to be built from source.
+### Release build
+
+NenRing is distributed as a DMG on GitHub Releases. The release is signed ad hoc only and is not notarized by Apple, so macOS asks you to allow it the first time you open it.
+
+1. **Download**: from the [Releases page](https://github.com/mugisk/NenRing/releases), download `NenRing-<version>-<revision>.dmg` and the `.sha256` file with the same name.
+2. **Verify the checksum**: run the following in Terminal, replacing the file name with the one you downloaded.
+
+   ```sh
+   cd ~/Downloads
+   shasum -a 256 -c NenRing-<version>-<revision>.dmg.sha256
+   ```
+
+   `OK` means the file matches the published one. If it shows `FAILED`, do not use the file; delete it.
+3. **Copy the app**: open the DMG and drag NenRing.app onto “Applications” in the same window. Open the copied app, not the one inside the DMG.
+4. **Allow the first launch**: when you open the copied NenRing.app, macOS stops it as an app Apple cannot verify. This warning has no option to open the app anyway. Close it, open System Settings → Privacy & Security, and choose “Open Anyway” for NenRing. See Apple’s support article “[Safely open apps on your Mac](https://support.apple.com/en-us/102445)” for details.
+5. **Install smartmontools**: if it is not installed yet, follow [Installing smartmontools](#installing-smartmontools).
+
+To update from an earlier version, quit NenRing completely (⌥⌘Q), then replace the existing app in step 3. Recorded history and settings are stored apart from the app and carry over.
+
+If a warning says the app is damaged or contains malware, do not open it; check where you downloaded it and the checksum. There is no need to turn off Gatekeeper as a whole, and doing so is not recommended. On a Mac managed by an organization, or on a non-administrator account, you may not be able to allow the app.
+
+Allowing the app to open is separate from the permission to read detailed SSD statistics. For the conditions under which the probes run with administrator rights, see [probe signature checks](docs/PROBE_SIGNATURE.en.md).
+
+### Build from source
 
 ```sh
 git clone https://github.com/mugisk/NenRing.git
@@ -75,7 +98,7 @@ cd NenRing
 open build/NenRing.app
 ```
 
-The app bundle is built at `build/NenRing.app` and signed ad hoc. You can run it from there or copy it to `/Applications`. Set `CODE_SIGN_IDENTITY` to sign it with your own identity. Reusable SwiftPM output is kept in `build/swiftpm/` and `build/swiftpm-cache/`. Developer ID signing and notarization are not part of this repository yet.
+The app bundle is built at `build/NenRing.app` and signed ad hoc. You can run it from there or copy it to `/Applications`. Set `CODE_SIGN_IDENTITY` to sign it with your own identity. Reusable SwiftPM output is kept in `build/swiftpm/` and `build/swiftpm-cache/`. This repository does not include Developer ID signing or notarization.
 
 ## Features
 

@@ -39,7 +39,7 @@ ditto "$app_dir" "$staging_dir/NenRing.app"
 xattr -cr "$staging_dir/NenRing.app"
 ln -s /Applications "$staging_dir/Applications"
 
-image_name="NenRing-${version}-${revision}-experimental.dmg"
+image_name="NenRing-${version}-${revision}.dmg"
 image_path="$temporary_dir/$image_name"
 hdiutil create -quiet -volname NenRing -srcfolder "$staging_dir" \
     -fs HFS+ -format UDZO "$image_path"

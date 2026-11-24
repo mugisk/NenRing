@@ -53,6 +53,6 @@
 - [他環境の診断レポート](DIAGNOSTIC_REPORTS.md)：取得・共有・保守側の確認とプライバシー上の制約。
 - [英語UIの用語と実装方針](UI_LOCALIZATION.md)：日本語から英語へ展開する際の表示・単位・日時・互換性。
 - [メニューバーポップの外観](MENU_BAR_APPEARANCE.md)：標準メニューの角・影を維持した外観設定の反映と、実描画の検証。
-- [実験版の作成と初回起動](EXPERIMENTAL_RELEASE.md)：UIと文書の整備後に行う最終工程。
+- [配布版の作成と初回起動](RELEASE.md)：DMGの作成、リリースページの記載事項、初回起動で確認した内容。
 
 ライセンスの正文はMITの[LICENSE](../LICENSE)です。[アイコンとロゴのライセンス](../Resources/NenRingIcons/LICENSE.md)は別に定めています。

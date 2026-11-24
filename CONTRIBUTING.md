@@ -25,7 +25,7 @@ Use these scripts rather than calling `swift` directly. They keep build output i
 
 ## Checks before a pull request
 
-There is no CI on GitHub. The merge gate is the local check:
+GitHub Actions runs the same check on macOS 26 for each pull request. Run it on your Mac as well before opening one:
 
 ```sh
 ./scripts/ci-local.sh
