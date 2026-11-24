@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024">
+<defs>
+<linearGradient id="bgL2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fbf8f3"></stop><stop offset="1" stop-color="#e7e0d5"></stop></linearGradient>
+<linearGradient id="pgL2" gradientUnits="userSpaceOnUse" x1="300" y1="760" x2="860" y2="180"><stop offset="0.30" stop-color="#000"></stop><stop offset="0.40" stop-color="#666"></stop><stop offset="0.53" stop-color="#fff"></stop></linearGradient>
+<mask id="pmL2" maskUnits="userSpaceOnUse" x="0" y="0" width="1024" height="1024"><rect width="1024" height="1024" fill="url(#pgL2)"></rect></mask>
+<mask id="gL2" maskUnits="userSpaceOnUse" x="0" y="0" width="1024" height="1024"><rect width="1024" height="1024" fill="#fff"></rect><polygon points="252.7,707.2 359.3,740.8 397.8,491.1 363.6,480.3" fill="#000" stroke="#000" stroke-width="34" stroke-linejoin="round"></polygon></mask>
+</defs>
+<rect x="100" y="100" width="824" height="824" rx="186" fill="url(#bgL2)" stroke="#d9d1c4" stroke-width="6"></rect>
+<g mask="url(#gL2)">
+<g><circle cx="560" cy="470" r="300" fill="#b87840"></circle><circle cx="560" cy="470" r="238" fill="#d49a5e"></circle><circle cx="560" cy="470" r="178" fill="#a86a36"></circle><circle cx="560" cy="470" r="116" fill="#c98c52"></circle></g>
+<g mask="url(#pmL2)"><circle cx="560" cy="470" r="300" fill="#6d7986"></circle><circle cx="560" cy="470" r="238" fill="#a8b3bf"></circle><circle cx="560" cy="470" r="178" fill="#56616d"></circle><circle cx="560" cy="470" r="116" fill="#909caa"></circle></g>
+<circle cx="560" cy="470" r="60" fill="#e9e3d9"></circle>
+</g>
+<circle cx="560" cy="470" r="18" fill="#2f3237"></circle>
+<polygon points="267.9,712 344.1,736 330.1,846.7 215.9,810.7" fill="#b87840"></polygon>
+<polygon points="252.7,707.2 359.3,740.8 397.8,491.1 363.6,480.3" fill="#2f3237" stroke="#2f3237" stroke-width="10" stroke-linejoin="round"></polygon>
+<circle cx="306" cy="724" r="58" fill="#2f3237"></circle>
+</svg>

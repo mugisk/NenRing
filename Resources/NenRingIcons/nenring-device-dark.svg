@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024">
+<defs>
+<linearGradient id="bgD" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2b2d32"></stop><stop offset="1" stop-color="#141518"></stop></linearGradient>
+<linearGradient id="pgD" gradientUnits="userSpaceOnUse" x1="300" y1="760" x2="860" y2="180"><stop offset="0.34" stop-color="#000"></stop><stop offset="0.47" stop-color="#555"></stop><stop offset="0.64" stop-color="#fff"></stop></linearGradient>
+<mask id="pmD" maskUnits="userSpaceOnUse" x="0" y="0" width="1024" height="1024"><rect width="1024" height="1024" fill="url(#pgD)"></rect></mask>
+<mask id="gD" maskUnits="userSpaceOnUse" x="0" y="0" width="1024" height="1024"><rect width="1024" height="1024" fill="#fff"></rect><g fill="#000" stroke="#000" stroke-width="26" stroke-linejoin="round"><polygon points="262.2,710.2 349.8,737.8 392.1,489.3 369.3,482.1"></polygon><rect x="367.6" y="460.3" width="34" height="26" rx="5" transform="rotate(-72.5 384.6 473.3)"></rect></g></mask>
+</defs>
+<rect x="100" y="100" width="824" height="824" rx="186" fill="url(#bgD)"></rect>
+<g mask="url(#gD)">
+<g><circle cx="560" cy="470" r="300" fill="#b87840"></circle><circle cx="560" cy="470" r="273" fill="#d49a5e"></circle><circle cx="560" cy="470" r="238" fill="#a86a36"></circle><circle cx="560" cy="470" r="215" fill="#c98c52"></circle><circle cx="560" cy="470" r="178" fill="#9a5f30"></circle><circle cx="560" cy="470" r="153" fill="#d7a56c"></circle><circle cx="560" cy="470" r="116" fill="#b07442"></circle><circle cx="560" cy="470" r="87" fill="#c68a50"></circle></g>
+<g mask="url(#pmD)"><circle cx="560" cy="470" r="300" fill="#5f6b78"></circle><circle cx="560" cy="470" r="273" fill="#8794a2"></circle><circle cx="560" cy="470" r="238" fill="#4e5966"></circle><circle cx="560" cy="470" r="215" fill="#76838f"></circle><circle cx="560" cy="470" r="178" fill="#48525e"></circle><circle cx="560" cy="470" r="153" fill="#95a1ae"></circle><circle cx="560" cy="470" r="116" fill="#5a6673"></circle><circle cx="560" cy="470" r="87" fill="#7f8c99"></circle></g>
+<circle cx="560" cy="470" r="58" fill="#1b1c1f"></circle>
+</g>
+<circle cx="560" cy="470" r="300" fill="none" stroke="#ffffff" stroke-opacity="0.08" stroke-width="3"></circle>
+<circle cx="560" cy="470" r="40" fill="#2e3035" stroke="#8d949c" stroke-width="4"></circle>
+<g fill="#8d949c"><circle cx="560" cy="444" r="5"></circle><circle cx="582.5" cy="457" r="5"></circle><circle cx="582.5" cy="483" r="5"></circle><circle cx="560" cy="496" r="5"></circle><circle cx="537.5" cy="483" r="5"></circle><circle cx="537.5" cy="457" r="5"></circle></g>
+<circle cx="560" cy="470" r="9" fill="#cfc8bd"></circle>
+<g transform="translate(0 10)" opacity="0.35" fill="#000"><polygon points="267.9,712 344.1,736 330.1,846.7 215.9,810.7"></polygon><polygon points="262.2,710.2 349.8,737.8 392.1,489.3 369.3,482.1"></polygon><circle cx="306" cy="724" r="54"></circle></g>
+<polygon points="267.9,712 344.1,736 330.1,846.7 215.9,810.7" fill="#6a4a2c" stroke="#b87840" stroke-width="6" stroke-linejoin="round"></polygon>
+<polygon points="262.2,710.2 349.8,737.8 392.1,489.3 369.3,482.1" fill="#ece5da" stroke="#ece5da" stroke-width="6" stroke-linejoin="round"></polygon>
+<rect x="367.6" y="460.3" width="34" height="26" rx="5" transform="rotate(-72.5 384.6 473.3)" fill="#cfc8bd"></rect>
+<circle cx="306" cy="724" r="50" fill="#3b3e44" stroke="#ece5da" stroke-width="8"></circle>
+<circle cx="306" cy="724" r="18" fill="#ece5da"></circle>
+</svg>

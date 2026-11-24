@@ -1,0 +1,8 @@
+.DS_Store
+.build/
+.swiftpm/
+build/
+*.xcuserstate
+
+# Probe captures (kept outside the repo, guard against accidental adds)
+*.bin

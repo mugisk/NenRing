@@ -1,0 +1,37 @@
+name: Bug report
+description: Something in NenRing does not work as expected.
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Issues and attachments on this repository are public.** Do not post serial numbers, full `ioreg` or `smartctl` output, sysdiagnose archives, or raw probe files.
+        For a security problem, do not open an issue; follow [SECURITY.md](https://github.com/mugisk/NenRing/blob/main/SECURITY.md) instead.
+        日本語で書いても構いません。
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: What you did, what you expected, and what happened instead.
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: NenRing version
+      description: From **About NenRing** (version, build and commit).
+      placeholder: "e.g. 0.2.0 (build 192, 2757814a1b2c)"
+    validations:
+      required: true
+  - type: input
+    id: mac
+    attributes:
+      label: Mac model, chip and macOS build
+      placeholder: "e.g. MacBook Air (M1), macOS 26.0 (25A354)"
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Error messages or screenshots
+      description: Remove anything you prefer not to share before posting.

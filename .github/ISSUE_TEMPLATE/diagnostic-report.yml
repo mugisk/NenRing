@@ -1,0 +1,43 @@
+name: Diagnostic report
+description: Share a NenRing diagnostic report from your Mac to help support more hardware and macOS builds.
+title: "[Report] <Mac model> / <SSD capacity> / macOS <build>"
+labels: ["diagnostic-report"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Issues and attachments on this repository are public.** Anyone can read and download what you post here.
+
+        In NenRing, open **Settings → General → Application → Diagnostic report → Share…** (Japanese UI: **設定 → 一般 → アプリ → 診断レポート → 提供する…**), click **Save…**, then **Open an issue on GitHub**. The title is filled in for you.
+
+        The report contains no serial numbers, device paths or device IDs, but does contain hardware details and usage counters. Dates are rounded to the day. Review it and remove anything you prefer not to share. Do not attach raw probe binaries, sysdiagnose archives or full logs.
+  - type: textarea
+    id: report
+    attributes:
+      label: Diagnostic report
+      description: Drag the saved nenring-report-….json file here, or paste its contents.
+    validations:
+      required: true
+  - type: textarea
+    id: notes
+    attributes:
+      label: Anything unexpected? (optional)
+      description: Values that look wrong, errors, or crashes. Japanese is fine.
+  - type: dropdown
+    id: direct-ftl
+    attributes:
+      label: Did you run Direct FTL collection? (optional)
+      description: If you are not sure, leave this empty; the report shows it.
+      options:
+        - "No"
+        - "Yes, it succeeded"
+        - "Yes, it failed"
+    validations:
+      required: false
+  - type: checkboxes
+    id: privacy-review
+    attributes:
+      label: Sharing review
+      options:
+        - label: I reviewed the report and am comfortable sharing the information it contains.
+          required: true
