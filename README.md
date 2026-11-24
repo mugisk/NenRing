@@ -79,7 +79,7 @@ NenRing is distributed as a DMG on GitHub Releases. The release is signed ad hoc
 
    `OK` means the file matches the published one. If it shows `FAILED`, do not use the file; delete it.
 3. **Copy the app**: open the DMG and drag NenRing.app onto “Applications” in the same window. Open the copied app, not the one inside the DMG.
-4. **Allow the first launch**: when you open the copied NenRing.app, macOS stops it as an app Apple cannot verify. This warning has no option to open the app anyway. Close it, open System Settings → Privacy & Security, and choose “Open Anyway” for NenRing. See Apple’s support article “[Safely open apps on your Mac](https://support.apple.com/en-us/102445)” for details.
+4. **Allow the first launch**: when you open the copied NenRing.app, macOS stops it as an app Apple cannot verify. This warning has no option to open the app anyway. Close it, open System Settings → Privacy & Security, and choose “Open Anyway” for NenRing. macOS then asks for administrator authentication. See Apple’s support article “[Safely open apps on your Mac](https://support.apple.com/en-us/102445)” for details.
 5. **Install smartmontools**: if it is not installed yet, follow [Installing smartmontools](#installing-smartmontools).
 
 To update from an earlier version, quit NenRing completely (⌥⌘Q), then replace the existing app in step 3. Recorded history and settings are stored apart from the app and carry over.
