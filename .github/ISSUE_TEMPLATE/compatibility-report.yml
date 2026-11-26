@@ -1,6 +1,7 @@
 name: Compatibility report / 動作報告
 description: Tell us what worked on your Mac. 添付不要。正常に動作した環境も歓迎します。
 title: "[Compatibility] "
+labels: ["compatibility-report"]
 body:
   - type: markdown
     attributes:
