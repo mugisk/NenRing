@@ -24,7 +24,11 @@ SMART（S.M.A.R.T.、Self-Monitoring, Analysis and Reporting Technology。NVMe�
 取得できた情報から、SMARTの警告や、不良ブロック・訂正不能エラーなどの増加を画面に表示します。FTLの項目を暫定的に解釈して比較する場合は、「暫定比較」と表示します。
 
 > [!NOTE]
-> 開発中のため予測の計算や表示は今後変更されることがあります。予測は研究上の推定で、Appleの公称値・保証・故障予測ではありません。他の機種やmacOSでも動作するよう設計していますが、実機で取得と予測を確認したのはM1 MacBook Air 1台のみです。[他のMacの診断レポート](#他環境のデータ提供診断レポート)を募集しています。
+> 開発中のため予測の計算や表示は今後変更されることがあります。予測は研究上の推定で、Appleの公称値・保証・故障予測ではありません。他の機種やmacOSでも動作するよう設計していますが、実機で取得と予測を確認したのはM1 MacBook Air 1台のみです。
+
+[動作を報告する（添付不要）](https://github.com/mugisk/NenRing/issues/new?template=compatibility-report.yml) · [診断レポートを提供する](https://github.com/mugisk/NenRing/issues/new?template=diagnostic-report.yml)
+
+どちらの報告にもGitHubアカウントが必要です。投稿者のユーザー名、報告内容、添付ファイルは公開されます。
 
 [インストール](#インストール) · [機能](#機能) · [対象ストレージ](#対象ストレージ) · [プライバシーとデータ](#プライバシーとデータ) · [ドキュメント](docs/README.md) · [他環境のデータ提供](#他環境のデータ提供診断レポート)
 
@@ -178,6 +182,8 @@ defaults delete io.github.mugisk.NenRing
 ## 他環境のデータ提供（診断レポート）
 
 取得・解析・予測計算の動作を確認した実機は、256 GBのMacBook Air（M1、Hynix TLC）1台です。予測した寿命や保持性能を実証したものではありません。他のMac・容量・macOS buildのレポートが、取得可能な環境を確認する材料になります。Direct FTLの値がないレポートも有用です。
+
+[動作報告](https://github.com/mugisk/NenRing/issues/new?template=compatibility-report.yml)には、Macの機種、macOSのバージョン、動作を確認した機能や取得できなかった項目を記入してください。診断ファイルも提供いただける場合は、以下の手順で保存できます。
 
 1. 設定の「一般」→「アプリ」→「診断レポート」にある「提供する…」を押します。
 2. 開いた画面で「保存…」を押し、ファイルを保存します。

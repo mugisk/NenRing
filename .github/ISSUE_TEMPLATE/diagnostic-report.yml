@@ -1,5 +1,5 @@
-name: Diagnostic report
-description: Share a NenRing diagnostic report from your Mac to help support more hardware and macOS builds.
+name: Diagnostic report / 診断レポート
+description: Share a diagnostic file exported by NenRing. アプリから保存した診断ファイルを提供します。
 title: "[Report] <Mac model> / <SSD capacity> / macOS <build>"
 labels: ["diagnostic-report"]
 body:
@@ -11,11 +11,12 @@ body:
         In NenRing, open **Settings → General → Application → Diagnostic report → Share…** (Japanese UI: **設定 → 一般 → アプリ → 診断レポート → 提供する…**), click **Save…**, then **Open an issue on GitHub**. The title is filled in for you.
 
         The report contains no serial numbers, device paths or device IDs, but does contain hardware details and usage counters. Dates are rounded to the day. Review it and remove anything you prefer not to share. Do not attach raw probe binaries, sysdiagnose archives or full logs.
+        投稿内容と添付ファイルは公開されます。設定の「一般」→「アプリ」→「診断レポート」→「提供する…」で保存したJSONを確認し、公開したくない項目は削除してください。
   - type: textarea
     id: report
     attributes:
-      label: Diagnostic report
-      description: Drag the saved nenring-report-….json file here, or paste its contents.
+      label: Diagnostic report / 診断レポート
+      description: Drag the saved nenring-report-….json file here, or paste its contents. 保存したJSONを添付するか、内容を貼り付けてください。
     validations:
       required: true
   - type: textarea
@@ -39,5 +40,5 @@ body:
     attributes:
       label: Sharing review
       options:
-        - label: I reviewed the report and am comfortable sharing the information it contains.
+        - label: I reviewed the report and am comfortable sharing the information it contains. レポートの内容を確認し、公開に同意します。
           required: true
