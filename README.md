@@ -24,7 +24,11 @@ It reads SMART data (Self-Monitoring, Analysis and Reporting Technology, also wr
 Using available readings, it displays SMART warnings and increases in bad blocks, uncorrectable errors and other error counters. FTL comparisons based on provisional interpretation are labeled “Provisional.”
 
 > [!NOTE]
-> NenRing is under active development, so its forecast calculations and displays may change. Forecasts are research estimates, not Apple ratings, warranties or failure predictions. It is built to work on other models and macOS releases, but acquisition and forecasts have been checked on real hardware only with one M1 MacBook Air. [Diagnostic reports from other Macs](#contributing-hardware-data) are welcome.
+> NenRing is under active development, so its forecast calculations and displays may change. Forecasts are research estimates, not Apple ratings, warranties or failure predictions. It is built to work on other models and macOS releases, but acquisition and forecasts have been checked on real hardware only with one M1 MacBook Air.
+
+[Report how NenRing works on your Mac](https://github.com/mugisk/NenRing/issues/new?template=compatibility-report.yml) · [Share a diagnostic report](https://github.com/mugisk/NenRing/issues/new?template=diagnostic-report.yml)
+
+Both forms require a GitHub account. Your username, report and attachments will be public.
 
 [Install](#install) · [Features](#features) · [Supported storage](#supported-storage) · [Privacy and data](#privacy-and-data) · [Documentation](docs/README.en.md) · [Report your Mac](#contributing-hardware-data)
 
@@ -178,6 +182,8 @@ defaults delete io.github.mugisk.NenRing
 ## Contributing hardware data
 
 Acquisition, parsing and forecast calculations have been checked on a single machine: a 256 GB MacBook Air (M1), with Hynix TLC NAND. This does not validate predicted lifespan or retention performance. Reports from other Macs, capacities and macOS builds help establish acquisition coverage. A report is useful without Direct FTL values.
+
+For a [compatibility report](https://github.com/mugisk/NenRing/issues/new?template=compatibility-report.yml), enter your Mac model, macOS version and what worked or failed. No attachment is needed. To share a diagnostic file, follow the steps below.
 
 1. Open **Settings → General → Application → Diagnostic report** and click **Share…**. In Japanese: **設定 → 一般 → アプリ → 診断レポート → 提供する…**.
 2. In the window that opens, click **Save…** and save the file.
