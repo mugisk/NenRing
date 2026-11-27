@@ -2,7 +2,7 @@
 
 [日本語](DATA_ACQUISITION.md) · [Documentation](README.en.md)
 
-This document describes what NenRing collects, where the data comes from and how it is read. It also covers the path from acquisition to the endurance forecast and the commands for checking the same information in Terminal. For reading the forecast, see the [forecast guide](FORECAST_GUIDE.en.md); for the calculation, see the [NAND model (Japanese)](NAND_MODEL_V2_4.md).
+This document describes what NenRing collects, where the data comes from and how it is read. It also covers the path from acquisition to the endurance forecast and the commands for checking the same information in Terminal. For reading the forecast, see the [forecast guide](FORECAST_GUIDE.en.md); for the calculation, see the [NAND model](NAND_MODEL_V2_4.en.md).
 
 NenRing collects the following. Reading statistics does not change SSD settings or firmware; history and settings are written to local files.
 
@@ -203,9 +203,9 @@ The former tunnel probe (0x106, 0x129, 0x12b) was removed because it always requ
    - Older versions of the app may not read the new format. See [lossless storage](LOSSLESS_HISTORY_STORAGE.en.md) for recovery steps, the format and its cost.
 2. **Continuity:** NenRing checks whether readings across macOS, firmware and acquisition-path changes can be treated as the same instrument.
 3. **Write amplification (WAF):** FTL NAND writes ÷ Host writes. The lifetime value and the recent value are combined for the forecast.
-4. **Forecast:** remaining TLC and pSLC P/E are converted to Host writes. The domain that runs out first sets the limit, which is converted to years at the write rate of the complete saved history ([NAND model, Japanese](NAND_MODEL_V2_4.md)).
+4. **Forecast:** remaining TLC and pSLC P/E are converted to Host writes. The domain that runs out first sets the limit, which is converted to years at the write rate of the complete saved history ([NAND model](NAND_MODEL_V2_4.en.md)).
 
-When FTL is unavailable, a provisional estimate is made from SMART Percentage Used and Host writes, or from a reference TBW ([reference TBW, Japanese](REFERENCE_TBW.md)).
+When FTL is unavailable, a provisional estimate is made from SMART Percentage Used and Host writes, or from a reference TBW ([reference TBW](REFERENCE_TBW.en.md)).
 
 ## What the app does not do
 

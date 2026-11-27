@@ -112,7 +112,7 @@ The app bundle is built at `build/NenRing.app` and signed ad hoc. You can run it
 - **Write history and read total:** chart Host and NAND writes by hour, day or week, or switch to TLC/pSLC estimated writes when Direct FTL is available. Host Reads is shown as a cumulative total.
 - **Live disk I/O:** read/write rates and a five-minute chart in the menu bar popup while monitoring is active. See [Everyday use](#everyday-use).
 - **Wear and endurance forecasts:** TLC and pSLC wear gauges and four scenarios for comparing remaining writes and estimated dates.
-- **Internal errors & retention:** the dashboard information button separates error-counter increases (internal errors) from data-retention work such as refresh and read verify. Retention work alone is not treated as failure. The retention pace compares the last 14 days with a baseline of up to 8 weeks and appears as a card at the top of the dashboard. Turning on the Light check in Settings notifies you of newly found warnings and pace increases (off by default). Mapped scalar error counters can be compared provisionally on other macOS builds when the key mapping, acquisition format and core history remain compatible. Provisional interpretation is labeled; inconsistencies such as counter decreases suspend the affected comparison. Histogram and refresh research metrics retain their reviewed-runtime requirements. [Scope and limitations (Japanese)](docs/DASHBOARD_RELIABILITY_INDICATORS.md).
+- **Internal errors & retention:** the dashboard information button separates error-counter increases (internal errors) from data-retention work such as refresh and read verify. Retention work alone is not treated as failure. The retention pace compares the last 14 days with a baseline of up to 8 weeks and appears as a card at the top of the dashboard. Turning on the Light check in Settings notifies you of newly found warnings and pace increases (off by default). Mapped scalar error counters can be compared provisionally on other macOS builds when the key mapping, acquisition format and core history remain compatible. Provisional interpretation is labeled; inconsistencies such as counter decreases suspend the affected comparison. Histogram and refresh research metrics retain their reviewed-runtime requirements. [Scope and limitations](docs/DASHBOARD_RELIABILITY_INDICATORS.en.md).
 - **Research views:** FTL topology, WAF, retention research models, reliability events, and raw values with their provenance.
 - **Values that cannot be read:** shown as unavailable, never replaced with 0 or "healthy". Unrecognized legacy diagnostics and external-tool output retain their original wording.
 - **Japanese and English:** the interface supports both languages.
@@ -207,12 +207,7 @@ Bug reports, diagnostic reports and pull requests are welcome. See [CONTRIBUTING
 
 ## Documentation
 
-Start with the [forecast guide](docs/FORECAST_GUIDE.en.md) and [documentation index](docs/README.en.md). The index and seven documents on forecasts, acquisition, validation, reports, history storage, probe security and local CI are available in English and Japanese. Detailed research specifications remain in Japanese for now and are labeled in the index.
-
-- [How NenRing reads its data](docs/DATA_ACQUISITION.en.md): SMART, IORegistry and Direct FTL, including the equivalent Terminal commands.
-- [NAND Model v2.4.1 (Japanese)](docs/NAND_MODEL_V2_4.md): the current forecast and the Direct FTL collection conditions.
-- [Reference TBW and workload assumptions (Japanese)](docs/REFERENCE_TBW.md): dashboard comparisons, provisional forecasts when FTL is unavailable, and their sources.
-- [Apple Silicon SSD hardware (Japanese)](docs/APPLE_SSD_HARDWARE.md): controllers and NAND by model from public sources, and the gaps reports should fill.
+See the [forecast guide](docs/FORECAST_GUIDE.en.md) for the remaining endurance estimates and the [documentation index](docs/README.en.md) for data collection, diagnostics and the research behind the forecasts.
 
 ## The name and icon
 

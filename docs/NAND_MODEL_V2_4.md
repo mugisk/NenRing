@@ -1,5 +1,7 @@
 # NAND Model v2.4.1 — Direct topology・残差分離・FTL内部イベント
 
+[English](NAND_MODEL_V2_4.en.md) · [文書の目次](README.md)
+
 更新日: 2026-10-02
 対象: NenRing の研究用 Apple Silicon SSD 耐久推計
 
