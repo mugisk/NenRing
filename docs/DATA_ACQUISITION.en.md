@@ -92,7 +92,7 @@ On macOS 26 and earlier, use the class name `AppleANS3NVMeController`.
 
 ## Direct FTL (FTL statistics)
 
-The target is bound by walking the selected disk's IORegistry ancestry. FTL and NAND information are both fixed to the same target; the first controller found is not simply taken. APFS synthesized disks are not counted as physical SSDs, and association is deferred when there are multiple namespaces or long-term identity is ambiguous. The number of FTL targets is not inferred from the NAND-module count or the Mac model, and values are not summed. See [target binding (Japanese)](STORAGE_TARGET_BINDING.md).
+The target is bound by walking the selected disk's IORegistry ancestry. FTL and NAND information are both fixed to the same target; the first controller found is not simply taken. APFS synthesized disks are not counted as physical SSDs, and association is deferred when there are multiple namespaces or long-term identity is ambiguous. The number of FTL targets is not inferred from the NAND-module count or the Mac model, and values are not summed.
 
 ### What the FTL is
 
@@ -147,7 +147,7 @@ Because the interface is private, several checks are layered:
   - Only internal Apple SSDs on Apple Silicon are targeted. In addition to the reviewed macOS versions (26 and 27), automatic FTL `all` reads are also attempted on macOS 14 and 15 assuming compatibility. The ABI and key meanings on 14 and 15 are not declared verified.
   - On other macOS versions, automatic collection starts for that Mac and major version after a manual read passes the SMART check. On 14 and 15, a passing check is also recorded as "checked against SMART on this Mac", but this does not mean every key's meaning has been verified. Coverage has not been confirmed on every supported Mac model.
   - After an automatic read fails, NenRing waits for the configured interval and stops after three consecutive failures. A check mismatch stops collection immediately and revokes the local validation record. A saved manual-only preference is not overridden, and collection never starts an administrator read or sysdiagnose on its own.
-- **Boundary checks:** across macOS and firmware updates, NenRing checks that values continue across the update ([boundary details, Japanese](INSTRUMENT_BOUNDARY_CONTINUITY.md)). Counter continuity does not validate the meaning of research keys or retention capability.
+- **Boundary checks:** across macOS and firmware updates, NenRing checks that values continue across the update. Counter continuity does not validate the meaning of research keys or retention capability.
 
 ### Checking in Terminal
 

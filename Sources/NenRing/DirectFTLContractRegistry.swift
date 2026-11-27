@@ -101,8 +101,7 @@ enum DirectFTLContractRegistry {
         // macOS 26 (25G83) and macOS 27 (26A434): the system diagnostic tool
         // selects vtable 0x108 (all) / 0x110 (perm) on the same NVMe SMART
         // interface, and the 26A428 -> 26A434 boundary passes D1-D8 on live
-        // data. See docs/DATA_ACQUISITION.md and
-        // docs/INSTRUMENT_BOUNDARY_CONTINUITY.md.
+        // data. See docs/DATA_ACQUISITION.md.
         reviewedMacOSMajorVersions: [26, 27],
         // Reviewed on one M1 MacBook Air (APPLE SSD AP0256Q, Hynix V6 TLC).
         reviewedControllerChipIDs: ["S5E"],

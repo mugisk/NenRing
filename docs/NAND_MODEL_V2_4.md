@@ -25,8 +25,7 @@ bin番号は温度単位へ変換せず、累積histogramとも仮定しない�
 元の取得時刻・build・契約版を保持し、欠けた配列を現在のsnapshotから補完しない。
 旧値は診断・比較用に保つが、現行の対応表へ意味付き昇格させず、TBW/WAF/保持補正には使用しない。
 研究契約の変更のみではcore損耗系列を分割しない一方、研究契約に依存する差分は
-互換性が確認できる範囲で扱う。現行の取得条件は[データ取得の仕組み](DATA_ACQUISITION.md)、
-差分の条件は[FTL時系列解析](FTL_TIME_SERIES_ANALYSIS.md)を参照する。
+互換性が確認できる範囲で扱う。現行の取得条件は[データ取得の仕組み](DATA_ACQUISITION.md)を参照する。
 
 Direct FTL snapshot には取得時の `deviceID`、firmware epoch、source build、firmware、
 MSP version、chip ID をOptional contextとして添付する。取得できない値はnilのままにし、
@@ -271,7 +270,7 @@ TLC基準に換算するにはTLCへの配分の仮定がもう1つ必要とな�
 
 寿命予測カードの行は上から「実使用」（とTLC・pSLCのNAND横棒）、「保持考慮」（日数・温度）、
 「クライアント負荷」（WAF 3.5）、「参考基準」（採用したTBW）の順に並べる。名称と条件を分離し、詳細は行と見出しの情報ボタンにまとめる。
-表示用語は [FORECAST_UI_TERMINOLOGY.md](FORECAST_UI_TERMINOLOGY.md) を参照。行は表示名ではなく種類（`Projection.Kind`）で選択する。
+行は表示名ではなく種類（`Projection.Kind`）で選択する。
 
 * 実使用行は観測量ベースの `ForecastWAF` を使用する。
 * Client行も保持補正なし（Kret = 1）で、違いは将来WAFの3.5（比較レンジ3–4）のみである。
