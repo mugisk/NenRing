@@ -75,8 +75,9 @@ The app looks for `smartctl` on `PATH` and in the `bin` and `sbin` folders of `/
 
 NenRing is distributed as a DMG on GitHub Releases. The release is signed ad hoc only and is not notarized by Apple, so macOS asks you to allow it the first time you open it.
 
-1. **Download**: from the [Releases page](https://github.com/mugisk/NenRing/releases), download `NenRing-<version>-<revision>.dmg` and the `.sha256` file with the same name.
-2. **Verify the checksum**: run the following in Terminal, replacing the file name with the one you downloaded.
+1. **Download**: from the [Releases page](https://github.com/mugisk/NenRing/releases), download `NenRing-<version>-<revision>.dmg`.
+
+   **If you want to verify the checksum**, save the matching `.dmg.sha256` file from the same release alongside the DMG. Run the following in Terminal, replacing the file name with the one you downloaded.
 
    ```sh
    cd ~/Downloads
@@ -84,11 +85,11 @@ NenRing is distributed as a DMG on GitHub Releases. The release is signed ad hoc
    ```
 
    `OK` means the file matches the published one. If it shows `FAILED`, do not use the file; delete it.
-3. **Copy the app**: open the DMG and drag NenRing.app onto “Applications” in the same window. Open the copied app, not the one inside the DMG.
-4. **Allow the first launch**: when you open the copied NenRing.app, macOS stops it as an app Apple cannot verify. This warning has no option to open the app anyway. Close it, open System Settings → Privacy & Security, and choose “Open Anyway” for NenRing. macOS then asks for administrator authentication. See Apple’s support article “[Safely open apps on your Mac](https://support.apple.com/en-us/102445)” for details.
-5. **Install smartmontools**: if it is not installed yet, follow [Installing smartmontools](#installing-smartmontools).
+2. **Copy the app**: open the DMG and drag NenRing.app onto “Applications” in the same window. Open the copied app, not the one inside the DMG.
+3. **Allow the first launch**: when you open the copied NenRing.app, macOS stops it as an app Apple cannot verify. This warning has no option to open the app anyway. Close it, open System Settings → Privacy & Security, and choose “Open Anyway” for NenRing. macOS then asks for administrator authentication. See Apple’s support article “[Safely open apps on your Mac](https://support.apple.com/en-us/102445)” for details.
+4. **Install smartmontools**: if it is not installed yet, follow [Installing smartmontools](#installing-smartmontools).
 
-To update from an earlier version, quit NenRing completely (⌥⌘Q), then replace the existing app in step 3. Recorded history and settings are stored apart from the app and carry over.
+To update from an earlier version, quit NenRing completely (⌥⌘Q), then replace the existing app in step 2. Recorded history and settings are stored apart from the app and carry over.
 
 If a warning says the app is damaged or contains malware, do not open it; check where you downloaded it and the checksum. There is no need to turn off Gatekeeper as a whole, and doing so is not recommended. On a Mac managed by an organization, or on a non-administrator account, you may not be able to allow the app.
 
