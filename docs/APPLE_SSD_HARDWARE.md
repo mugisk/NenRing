@@ -1,5 +1,7 @@
 # Apple Silicon内蔵SSDのハードウェア（公開情報）
 
+[English](APPLE_SSD_HARDWARE.en.md) · [文書の目次](README.md)
+
 Apple Silicon内蔵SSDについて、公開情報から判明していることを2026年10月時点でまとめたものです。NenRingが各機種のSSDを判別するために使用します。実測の代わりにはならないため、最後の節に、寄稿者の[診断レポート](../README.ja.md)でしか埋められない項目を挙げています。
 
 確度の目安は次のとおりです。

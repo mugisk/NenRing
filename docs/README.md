@@ -2,7 +2,7 @@
 
 [English](README.en.md) · [プロジェクトのREADME](../README.ja.md)
 
-この目次と、以下の入門文書7本には日本語版と英語版があります。プロジェクトの[README](../README.ja.md)、[貢献の手引き](../CONTRIBUTING.ja.md)、[セキュリティ方針](../SECURITY.ja.md)、[第三者ソフトウェアの表記](../THIRD_PARTY_NOTICES.ja.md)にも英語版があります。既存の日本語文書のパスは変更せず、英語版のファイル名には `.en.md` を付けます。詳細な研究仕様は当面日本語のみです。
+この目次に掲載している文書は日本語と英語で参照できます。
 
 ## はじめに読む
 
@@ -13,7 +13,7 @@
 - [計測履歴の可逆集約](LOSSLESS_HISTORY_STORAGE.md)：バックアップの範囲、復旧、メモリ上の扱い。
 - [ASP probe署名検証](PROBE_SIGNATURE.md)：実行前の確認とアドホック署名の限界。
 
-## 寿命予測の根拠（日本語）
+## 寿命予測の根拠
 
 - [NAND Model v2.4.1](NAND_MODEL_V2_4.md)：現行の寿命予測の計算と、Direct FTLの取得条件。
 - [参考TBWとワークロードの前提](REFERENCE_TBW.md)：ダッシュボードの比較基準、FTL不足時の暫定推定と、その出典。

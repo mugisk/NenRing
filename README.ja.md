@@ -207,12 +207,7 @@ defaults delete io.github.mugisk.NenRing
 
 ## ドキュメント
 
-[寿命予測の読み方](docs/FORECAST_GUIDE.md)と[ドキュメントの目次](docs/README.md)から参照できます。目次と、予測・取得・照合・レポート・保存・probeの安全性・ローカルCIを扱う7文書は日英で用意しています。詳しい研究仕様は当面日本語のみで、目次で区別しています。
-
-- [データ取得の仕組み](docs/DATA_ACQUISITION.md)：SMART・IORegistry・Direct FTLを何からどう読んでいるか。ターミナルで確認するためのコマンド付き。
-- [NAND Model v2.4.1](docs/NAND_MODEL_V2_4.md)：現行の寿命予測の計算と、Direct FTLの取得条件。
-- [参考TBWとワークロードの前提](docs/REFERENCE_TBW.md)：ダッシュボードの比較基準、FTL不足時の暫定推定と出典。
-- [Apple Silicon内蔵SSDのハードウェア](docs/APPLE_SSD_HARDWARE.md)：公開情報から判明している機種別のコントローラとNAND、レポートで補いたい項目。
+残り書込量や寿命予測の見方は[寿命予測の読み方](docs/FORECAST_GUIDE.md)を参照してください。取得方法、診断レポート、予測の根拠は[文書の目次](docs/README.md)から参照できます。
 
 ## 名前とアイコンの由来
 

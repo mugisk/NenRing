@@ -1,5 +1,7 @@
 # 保持の研究推計（Retention Research Estimate）
 
+[English](RETENTION_RESEARCH_ESTIMATE.en.md) · [文書の目次](README.md)
+
 ## ダッシュボードの保持考慮シナリオ — 現行
 
 ダッシュボードの「保持考慮」は `RetentionScenario.swift` で計算します。自動温度には読み書きの少ない区間の実測温度を使用し、その温度が指定日数続くと仮定します。非通電中の温度は測定できないため、実際の保管温度との差は確認できません。利用者指定・過去観測・既定温度は出典を分けます。

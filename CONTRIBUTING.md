@@ -36,7 +36,7 @@ It runs the tests, builds the release app and verifies the signatures of the app
 ## Guidelines
 
 - **Keep changes focused.** One topic per pull request. Match the naming and patterns of the surrounding code, and add or update tests when you change behavior.
-- **Documentation:** README, SECURITY, THIRD_PARTY_NOTICES, this guide and the entry documents listed in the [documentation index](docs/README.en.md) have English and Japanese versions. Update both when changing their content. Detailed research specifications remain Japanese-only for now, as noted in the English index. Describe current behavior in the current specifications, not only in an older design proposal.
+- **Documentation:** Update both language versions when changing the README, this guide, the security policy, third-party notices or a guide in the [documentation index](docs/README.en.md).
 - **Private Apple interfaces:** NenRing only reads, and only through the fixed calls described in [data acquisition](docs/DATA_ACQUISITION.en.md). Do not add new private calls, opcodes or anything that writes to the SSD controller without discussing it in an issue first. Never scan opcodes or functions.
 - **Your data stays local:** do not commit real history files, probe captures or anything with a serial number. Tests use synthetic fixtures.
 - **Icons and logo:** the images in `Resources/NenRingIcons/` are not covered by the MIT License (see [their notice](Resources/NenRingIcons/LICENSE.md)). If you distribute a modified version, replace them with your own.
